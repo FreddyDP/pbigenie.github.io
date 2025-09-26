@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PBIGenie - Modern Power BI Visuals</title>
+  <title>PBI Genie - Modern Power BI Visuals</title>
   <link rel="icon" type="image/x-icon" href="favicon-light.ico">
   <style>
     body {
@@ -24,9 +24,23 @@
     header img {
       position: absolute;
       right: 20px;
-      top: 5px;         /* nudged a little closer to center */
-      max-height: 113px; /* was 80px */
+      top: 10px;
+      max-height: 80px;
       width: auto;
+    }
+  /* On smaller screens (like mobile), make the logo resize and stack */
+    @media (max-width: 768px) {
+    header {
+      text-align: center;
+      padding-bottom: 100px; /* give space for the logo */
+      }
+
+    header img {
+      position: static; /* remove absolute positioning */
+      display: block;
+      margin: 10px auto 0 auto; /* center below the title */
+      max-height: 60px; /* smaller for mobile */
+      }
     }
     header h1 {
       margin: 0;
@@ -55,7 +69,7 @@
 </head>
 <body>
   <header>
-    <h1>PBIGenie</h1>
+    <h1>PBI Genie</h1>
     <p>Modern Power BI Visuals</p>
     <img src="Logo.png" alt="PBIGenie Logo">
   </header>
@@ -63,7 +77,7 @@
   <main>
     <h2>About Us</h2>
     <p>
-      PBIGenie develops <strong>modern certified Power BI visuals</strong> designed for professionals, loved by consultants.  
+      PBI Genie develops <strong>modern certified Power BI visuals</strong> designed for professionals, loved by consultants.  
       We focus on innovation where it matters most — the charting layer of Power BI — to help you tell stories with data.
     </p>
     <p><em>"Your wish is a chart — in fact — Your wish is my chart."</em></p>
