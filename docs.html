@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PBIGenie - Help / Docs</title>
+  <style>
+
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f9fc; color: #333; line-height: 1.6; }
+    header { background: #1e2a47; color: #fff; text-align: center; padding: 2rem 1rem 1rem; }
+    header h1 { margin: 0; font-size: 2.5rem; }
+    header p { margin: 0.5rem 0 0; font-size: 1.2rem; }
+    nav { margin-top: 1.2rem; display: flex; justify-content: center; flex-wrap: wrap; gap: 0.9rem; }
+    nav a { color: #fff; text-decoration: none; padding: 0.35rem 0.65rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.25); font-size: 0.95rem; }
+    nav a:hover { border-color: rgba(255,255,255,0.7); }
+    nav a.active { background: rgba(255,255,255,0.16); border-color: rgba(255,255,255,0.7); }
+    main { padding: 2rem 10%; }
+    .tagline { font-size: 1.4rem; font-style: italic; margin: 1rem 0; color: #444; }
+    .card { background: #fff; border: 1px solid #e6e8ef; border-radius: 14px; padding: 1.25rem; box-shadow: 0 6px 22px rgba(0,0,0,0.06); margin: 1.25rem 0; }
+    footer { background: #1e2a47; color: #fff; text-align: center; padding: 1rem; }
+    footer a { color: #cfe6ff; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    a { color: #0078d7; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 1.25rem; }
+    code { background: #f1f3f9; padding: 0.15rem 0.35rem; border-radius: 6px; }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PBIGenie</h1>
+    <p>Modern Power BI Visuals</p>
+    <nav aria-label="Primary">
+      <a href="/index.html" class="">Home</a>
+      <a href="/docs.html" class="active">Help / Docs</a>
+      <a href="/support.html" class="">Support Policy</a>
+      <a href="/terms.html" class="">Terms of Use</a>
+      <a href="/privacy.html" class="">Privacy Policy</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Help / Docs</h2>
+    
+<div class="card">
+  <p><em>Last updated: 29 December 2025</em></p>
+
+  <h3>Quick start</h3>
+  <ol>
+    <li>Add the PBIGenie visual to your report (AppSource or imported .pbiviz, depending on your distribution).</li>
+    <li>Drag a field into <strong>Category</strong>.</li>
+    <li>Drag one or more measures into <strong>Value</strong>.</li>
+    <li>(Optional) Drag a measure into <strong>Overlap</strong> to show the overlap layer.</li>
+    <li>Open the <strong>Format</strong> pane to customize bars, markers, overlap, and labels.</li>
+  </ol>
+
+  <h3>Field well mapping</h3>
+  <ul>
+    <li><strong>Category</strong>: the grouping field (e.g., Region, Product)</li>
+    <li><strong>Value</strong>: one or more measures (e.g., Sales, Cost)</li>
+    <li><strong>Overlap (optional)</strong>: a measure used to render the overlap layer</li>
+  </ul>
+
+  <h3>Common tips</h3>
+  <ul>
+    <li>If your data contains positive and negative values, the visual will automatically handle the zero baseline.</li>
+    <li>Use the <strong>Overlap Bars</strong> formatting card to control thickness, color, and clamping behavior.</li>
+    <li>Use <strong>Overlap markers</strong> for head/marker customization and per-category marker colors.</li>
+  </ul>
+
+  <h3>Keyboard & accessibility</h3>
+  <ul>
+    <li>Use <strong>Tab</strong> to focus the visual.</li>
+    <li>Open the context menu using <strong>Shift + F10</strong> (or the Menu key).</li>
+    <li>High Contrast is supported through Windows Accessibility themes.</li>
+  </ul>
+
+  <h3>Troubleshooting</h3>
+  <ul>
+    <li><strong>Visual is blank</strong>: check that Category and at least one Value measure are populated.</li>
+    <li><strong>Unexpected colors</strong>: verify per-category coloring toggles in the relevant formatting cards.</li>
+    <li><strong>Overlap not showing</strong>: ensure the Overlap field is populated and “Show overlap” is enabled.</li>
+  </ul>
+
+  <h3>Contact</h3>
+  <p>If you’re stuck, email <a href="mailto:support@pbigenie.com">support@pbigenie.com</a>.</p>
+</div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 PBIGenie Pty Ltd. All rights reserved.</p>
+    <p>
+      <a href="/privacy.html">Privacy</a> ·
+      <a href="/terms.html">Terms</a> ·
+      <a href="/support.html">Support</a> ·
+      <a href="/docs.html">Help / Docs</a>
+    </p>
+  </footer>
+</body>
+</html>
