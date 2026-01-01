@@ -22,13 +22,12 @@
       position: relative;
     }
     header img {
-      position: absolute;
-      right: 20px;
-      top: 10px;
-      max-height: 95px;     /* desktop logo height */
+      position: static;
+      display: block;
+      margin: 12px auto 0 auto;  /* centered under subtitle */
+      max-height: 190px;         /* double size */
       width: auto;
     }
-
     /* On smaller screens (like mobile), make the logo resize and stack */
     @media (max-width: 768px) {
     header {
