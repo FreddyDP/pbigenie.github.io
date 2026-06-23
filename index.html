@@ -135,6 +135,20 @@
       color: white;
     }
 
+    .showcase-single {
+      margin-top: 18px;
+      border: 1px solid var(--pbigenie-border);
+      border-radius: 14px;
+      overflow: hidden;
+      background-color: #fbfbfd;
+    }
+
+    .showcase-single img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
     .feature-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -151,33 +165,6 @@
 
     .feature-card p {
       margin-bottom: 0;
-    }
-
-    .showcase-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 18px;
-    }
-
-    .showcase-card {
-      border: 1px solid var(--pbigenie-border);
-      border-radius: 14px;
-      overflow: hidden;
-      background-color: #fbfbfd;
-    }
-
-    .showcase-card img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-    .showcase-card p {
-      margin: 0;
-      padding: 12px 14px;
-      font-size: 0.95rem;
-      color: #555;
     }
 
     .simple-links p {
@@ -215,8 +202,7 @@
         padding: 20px;
       }
 
-      .feature-grid,
-      .showcase-grid {
+      .feature-grid {
         grid-template-columns: 1fr;
       }
 
@@ -264,20 +250,12 @@
     <section>
       <h2>Visual showcase</h2>
       <p>
-        PBIGenie helps bring advanced bar chart layouts into Power BI, including horizontal and vertical views,
-        overlap bars, lollipops, hammerheads, rounded caps, legends, labels, and grid lines.
+        PBIGenie brings advanced Power BI chart layouts into a single certified visual, including horizontal and vertical views,
+        overlap bars, lollipops, rounded styling, legends, labels, and performance colours.
       </p>
 
-      <div class="showcase-grid">
-        <div class="showcase-card">
-          <img src="showcase-1.png" alt="PBIGenie horizontal bar chart showcase" onerror="this.closest('.showcase-card').style.display='none';">
-          <p>Horizontal bar chart layouts with overlap bars, lollipops, labels, and custom styling.</p>
-        </div>
-
-        <div class="showcase-card">
-          <img src="showcase-2.png" alt="PBIGenie vertical bar chart showcase" onerror="this.closest('.showcase-card').style.display='none';">
-          <p>Vertical chart layouts using Axis Flip, with clean labels, grids, and flexible formatting.</p>
-        </div>
+      <div class="showcase-single">
+        <img src="showcase-main.png" alt="PBIGenie horizontal and vertical Power BI chart showcase" onerror="this.closest('.showcase-single').style.display='none';">
       </div>
     </section>
 
