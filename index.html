@@ -5,218 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PBIGenie - Modern Power BI Visuals</title>
   <link rel="icon" type="image/x-icon" href="favicon-light.ico">
-
   <style>
-    :root {
-      --pbigenie-navy: #1e2a47;
-      --pbigenie-purple: #573B92;
-      --pbigenie-grey: #B3B3B3;
-      --pbigenie-light: #f8f9fa;
-      --pbigenie-text: #333333;
-      --pbigenie-white: #ffffff;
-      --pbigenie-border: #e2e5ea;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background-color: var(--pbigenie-light);
-      color: var(--pbigenie-text);
-    }
-
-    header {
-      background: linear-gradient(135deg, var(--pbigenie-navy), var(--pbigenie-purple));
-      color: white;
-      padding: 28px 20px 34px;
-      text-align: center;
-      position: relative;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.8rem;
-      letter-spacing: 0.5px;
-    }
-
-    header .subtitle {
-      margin: 0.45rem 0 0;
-      font-size: 1.25rem;
-      font-weight: 500;
-    }
-
-    header .tagline {
-      margin: 0.65rem 0 0;
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: #f3f0ff;
-    }
-
-    header img {
-      position: static;
-      display: block;
-      margin: 22px auto 0 auto;
-      max-height: 170px;
-      width: auto;
-    }
-
-    main {
-      padding: 24px 20px 40px;
-      max-width: 980px;
-      margin: auto;
-    }
-
-    section {
-      background: var(--pbigenie-white);
-      border: 1px solid var(--pbigenie-border);
-      border-radius: 14px;
-      padding: 24px;
-      margin: 22px 0;
-      box-shadow: 0 4px 14px rgba(30, 42, 71, 0.06);
-    }
-
-    h2 {
-      color: var(--pbigenie-navy);
-      margin-top: 0;
-      margin-bottom: 12px;
-    }
-
-    h3 {
-      color: var(--pbigenie-purple);
-      margin-bottom: 8px;
-    }
-
-    a {
-      color: #1e90ff;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .hero-copy {
-      font-size: 1.08rem;
-      max-width: 820px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .button-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 11px 18px;
-      border-radius: 999px;
-      font-weight: 700;
-      text-decoration: none;
-      transition: transform 0.12s ease, box-shadow 0.12s ease;
-    }
-
-    .button:hover {
-      transform: translateY(-1px);
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(30, 42, 71, 0.15);
-    }
-
-    .button-primary {
-      background-color: var(--pbigenie-purple);
-      color: white;
-    }
-
-    .button-secondary {
-      background-color: var(--pbigenie-navy);
-      color: white;
-    }
-
-    .showcase-single {
-      margin-top: 18px;
-      border: 1px solid var(--pbigenie-border);
-      border-radius: 14px;
-      overflow: hidden;
-      background-color: #fbfbfd;
-    }
-
-    .showcase-single img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 18px;
-    }
-
-    .feature-card {
-      border: 1px solid var(--pbigenie-border);
-      border-radius: 12px;
-      padding: 16px;
-      background-color: #fbfbfd;
-    }
-
-    .feature-card p {
-      margin-bottom: 0;
-    }
-
-    .simple-links p {
-      margin: 8px 0;
-    }
-
-    footer {
-      text-align: center;
-      padding: 22px 20px;
-      color: #666;
-      font-size: 0.92rem;
-    }
-
-    @media (max-width: 768px) {
-      header {
-        text-align: center;
-        padding: 24px 16px 28px;
-      }
-
-      header h1 {
-        font-size: 2.25rem;
-      }
-
-      header img {
-        margin: 18px auto 0 auto;
-        max-height: 150px;
-        width: auto;
-      }
-
-      main {
-        padding: 18px 14px 32px;
-      }
-
-      section {
-        padding: 20px;
-      }
-
-      .feature-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .button-row {
-        flex-direction: column;
-      }
-
-      .button {
-        text-align: center;
-      }
+    :root { --pbigenie-navy:#1e2a47; --pbigenie-purple:#573B92; --pbigenie-grey:#B3B3B3; --pbigenie-light:#f8f9fa; --pbigenie-text:#333333; --pbigenie-white:#ffffff; --pbigenie-border:#e2e5ea; }
+    * { box-sizing:border-box; }
+    body { font-family:Arial,sans-serif; margin:0; padding:0; line-height:1.6; background-color:var(--pbigenie-light); color:var(--pbigenie-text); }
+    header { background:linear-gradient(135deg,var(--pbigenie-navy),var(--pbigenie-purple)); color:white; padding:28px 20px 34px; text-align:center; }
+    header h1 { margin:0; font-size:2.8rem; letter-spacing:.5px; }
+    header .subtitle { margin:.45rem 0 0; font-size:1.25rem; font-weight:500; }
+    header .tagline { margin:.65rem 0 0; font-size:1.05rem; font-weight:600; color:#f3f0ff; }
+    header img { display:block; margin:22px auto 0; max-height:170px; width:auto; }
+    main { padding:24px 20px 40px; max-width:1100px; margin:auto; }
+    section { background:var(--pbigenie-white); border:1px solid var(--pbigenie-border); border-radius:14px; padding:24px; margin:22px 0; box-shadow:0 4px 14px rgba(30,42,71,.06); }
+    h2 { color:var(--pbigenie-navy); margin-top:0; margin-bottom:12px; }
+    h3 { color:var(--pbigenie-purple); margin-bottom:8px; }
+    a { color:#1e90ff; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .hero-copy { font-size:1.08rem; max-width:820px; margin-left:auto; margin-right:auto; }
+    .button-row { display:flex; flex-wrap:wrap; gap:12px; margin-top:18px; }
+    .button { display:inline-block; padding:11px 18px; border-radius:999px; font-weight:700; text-decoration:none; transition:transform .12s ease,box-shadow .12s ease; }
+    .button:hover { transform:translateY(-1px); text-decoration:none; box-shadow:0 4px 12px rgba(30,42,71,.15); }
+    .button-primary { background-color:var(--pbigenie-purple); color:white; }
+    .button-secondary { background-color:var(--pbigenie-navy); color:white; }
+    .showcase-intro { max-width:860px; margin-bottom:20px; }
+    .showcase-list { display:grid; gap:24px; margin-top:20px; }
+    .showcase-item { border:1px solid var(--pbigenie-border); border-radius:14px; overflow:hidden; background-color:#fbfbfd; box-shadow:0 3px 10px rgba(30,42,71,.05); }
+    .showcase-item img { display:block; width:100%; height:auto; }
+    .showcase-caption { padding:16px 18px 18px; border-top:1px solid var(--pbigenie-border); background:var(--pbigenie-white); }
+    .showcase-caption h3 { margin:0 0 5px; }
+    .showcase-caption p { margin:0; color:#555; }
+    .feature-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin-top:18px; }
+    .feature-card { border:1px solid var(--pbigenie-border); border-radius:12px; padding:16px; background-color:#fbfbfd; }
+    .feature-card p { margin-bottom:0; }
+    .simple-links p { margin:8px 0; }
+    footer { text-align:center; padding:22px 20px; color:#666; font-size:.92rem; }
+    @media (max-width:768px) {
+      header { padding:24px 16px 28px; }
+      header h1 { font-size:2.25rem; }
+      header img { margin:18px auto 0; max-height:150px; }
+      main { padding:18px 14px 32px; }
+      section { padding:20px; }
+      .feature-grid { grid-template-columns:1fr; }
+      .button-row { flex-direction:column; }
+      .button { text-align:center; }
+      .showcase-list { gap:18px; }
     }
   </style>
 </head>
-
 <body>
   <header>
     <h1>PBIGenie</h1>
@@ -228,104 +62,70 @@
   <main>
     <section>
       <h2>Advanced Power BI visuals, made simple</h2>
-      <p class="hero-copy">
-        PBIGenie develops <strong>modern certified Power BI visuals</strong> designed to help creators build polished,
-        flexible, and presentation-ready reports without wrestling every chart into shape.
-      </p>
-      <p class="hero-copy">
-        <strong>No DAX required. DAX welcomed.</strong> PBIGenie is simple enough for everyday report builders,
-        but flexible enough for advanced Power BI users who want more control.
-      </p>
-
+      <p class="hero-copy">PBIGenie develops <strong>modern certified Power BI visuals</strong> designed to help creators build polished, flexible, and presentation-ready reports without wrestling every chart into shape.</p>
+      <p class="hero-copy"><strong>No DAX, no Deneb, no SVG, and no custom JSON required. DAX welcomed.</strong> PBIGenie is simple enough for everyday report builders, but flexible enough for advanced Power BI users who want more control.</p>
       <div class="button-row">
-        <a class="button button-primary" href="https://marketplace.microsoft.com/en-us/product/pbigenie.pbigenie_hbc_1" target="_blank" rel="noopener">
-          Get PBIGenie on Microsoft Marketplace
-        </a>
-        <a class="button button-secondary" href="https://www.youtube.com/@PBIGenie" target="_blank" rel="noopener">
-          Watch PBIGenie on YouTube
-        </a>
+        <a class="button button-primary" href="https://marketplace.microsoft.com/en-us/product/pbigenie.pbigenie_hbc_1" target="_blank" rel="noopener">Get PBIGenie on Microsoft Marketplace</a>
+        <a class="button button-secondary" href="https://www.youtube.com/@PBIGenie" target="_blank" rel="noopener">Watch PBIGenie on YouTube</a>
       </div>
     </section>
 
     <section>
       <h2>Visual showcase</h2>
-      <p>
-        PBIGenie brings advanced Power BI chart layouts into a single certified visual, including horizontal and vertical views,
-        overlap bars, lollipops, rounded styling, legends, labels, and performance colours.
-      </p>
-
-      <div class="showcase-single">
-        <img src="showcase-main.png" alt="PBIGenie horizontal and vertical Power BI chart showcase" onerror="this.closest('.showcase-single').style.display='none';">
+      <p class="showcase-intro">Explore how PBIGenie turns advanced business reporting patterns into familiar Power BI workflows—from one simple Build experience through to executive-ready comparison charts, Gantt reporting, and S-Curves.</p>
+      <div class="showcase-list">
+        <article class="showcase-item">
+          <img src="pbigenie-architecture.jpg" alt="PBIGenie architecture showing one Build experience, chart type selection, and familiar Format controls">
+          <div class="showcase-caption"><h3>Simple by Design</h3><p>Choose the reporting pattern, use familiar Build and Format panes, and build advanced visuals the Power BI way.</p></div>
+        </article>
+        <article class="showcase-item">
+          <img src="pbigenie-capabilities.jpg" alt="PBIGenie capabilities including horizontal, vertical, gradient, lollipop, hammerhead, and delta reporting">
+          <div class="showcase-caption"><h3>One Visual, Many Reporting Patterns</h3><p>Build horizontal, vertical, gradient, lollipop, hammerhead, delta, and advanced comparison visuals in one certified visual.</p></div>
+        </article>
+        <article class="showcase-item">
+          <img src="pbigenie-gantt-lite.jpg" alt="PBIGenie Gantt Lite planned versus actual project reporting">
+          <div class="showcase-caption"><h3>Gantt Lite</h3><p>Compare Planned and Actual dates, show progress, and create clear project-controls reporting directly inside Power BI.</p></div>
+        </article>
+        <article class="showcase-item">
+          <img src="pbigenie-scurve-monthly.jpg" alt="PBIGenie monthly S-Curve with earned value, baseline, forecast, and milestone markers">
+          <div class="showcase-caption"><h3>Monthly S-Curve Reporting</h3><p>Combine monthly performance bars with cumulative earned, baseline, and forecast lines for executive reporting.</p></div>
+        </article>
+        <article class="showcase-item">
+          <img src="pbigenie-scurve-weekly.jpg" alt="PBIGenie weekly S-Curve with cumulative lines and milestone markers">
+          <div class="showcase-caption"><h3>Weekly S-Curve Reporting</h3><p>Use the same reporting pattern at a more detailed weekly level for operational project-controls analysis.</p></div>
+        </article>
+        <article class="showcase-item">
+          <img src="showcase-main.png" alt="PBIGenie horizontal and vertical Power BI chart showcase" onerror="this.closest('.showcase-item').style.display='none';">
+          <div class="showcase-caption"><h3>Advanced Comparison Reporting</h3><p>Build polished horizontal and vertical comparisons with overlap bars, labels, legends, rounded styling, and performance colours.</p></div>
+        </article>
       </div>
     </section>
 
     <section>
       <h2>What PBIGenie can do</h2>
-
       <div class="feature-grid">
-        <div class="feature-card">
-          <h3>Horizontal and vertical charts</h3>
-          <p>
-            Use Axis Flip to move between horizontal and vertical layouts while keeping the visual clean and flexible.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <h3>Bar-on-bar comparisons</h3>
-          <p>
-            Compare values with overlap bars, making budget, target, actual, and performance views easier to read.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <h3>Lollipops and hammerheads</h3>
-          <p>
-            Add more visual personality and clarity with lollipop and hammerhead styling options.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <h3>Creator-friendly formatting</h3>
-          <p>
-            Control colours, labels, legends, rounded caps, grids, and layout details directly in the visual.
-          </p>
-        </div>
+        <div class="feature-card"><h3>Horizontal and vertical charts</h3><p>Move between horizontal and vertical layouts while keeping the visual clean, flexible, and familiar.</p></div>
+        <div class="feature-card"><h3>Bar-on-bar comparisons</h3><p>Compare reference and primary values for budget, target, actual, variance, and performance reporting.</p></div>
+        <div class="feature-card"><h3>Lines, S-Curves and Gantt Lite</h3><p>Extend comparison reporting into cumulative line charts, executive S-Curves, and practical planned-versus-actual timelines.</p></div>
+        <div class="feature-card"><h3>Creator-friendly formatting</h3><p>Control colours, labels, legends, markers, gradients, grids, and layout details directly through familiar Power BI controls.</p></div>
       </div>
     </section>
 
     <section>
       <h2>About Us</h2>
-      <p>
-        PBI Genie Pty Ltd builds <strong>modern certified Power BI visuals</strong> for report creators, consultants,
-        analysts, and business teams who want better charting options inside Power BI.
-      </p>
-      <p>
-        We focus on innovation where it matters most — the charting layer of Power BI — helping users tell clearer,
-        sharper, and more useful stories with data.
-      </p>
+      <p>PBI Genie Pty Ltd builds <strong>modern certified Power BI visuals</strong> for report creators, consultants, analysts, planners, and business teams who want better reporting options inside Power BI.</p>
+      <p>We focus on innovation where it matters most—the charting layer of Power BI—helping users tell clearer, sharper, and more useful stories with data.</p>
       <p><em>"Your wish is a chart."</em></p>
     </section>
 
     <section class="simple-links">
-      <h2>Contact</h2>
-      <p>Email us at <a href="mailto:support@pbigenie.com">support@pbigenie.com</a></p>
-
-      <h2>Privacy</h2>
-      <p>Read our <a href="privacy.html">Privacy Policy</a>.</p>
-
-      <h2>Support</h2>
-      <p>Read our <a href="support.html">Support Policy</a>.</p>
-
-      <h2>Terms of Use</h2>
-      <p>Read our <a href="terms.html">Terms of Use Policy</a>.</p>
-
-      <h2>Help / Docs</h2>
-      <p>Read our <a href="docs.html">Help / Docs Notes</a>.</p>
+      <h2>Contact</h2><p>Email us at <a href="mailto:support@pbigenie.com">support@pbigenie.com</a></p>
+      <h2>Privacy</h2><p>Read our <a href="privacy.html">Privacy Policy</a>.</p>
+      <h2>Support</h2><p>Read our <a href="support.html">Support Policy</a>.</p>
+      <h2>Terms of Use</h2><p>Read our <a href="terms.html">Terms of Use Policy</a>.</p>
+      <h2>Help / Docs</h2><p>Read our <a href="docs.html">Help / Docs Notes</a>.</p>
     </section>
   </main>
-
-  <footer>
-    &copy; 2026 PBI Genie Pty Ltd. All rights reserved.
-  </footer>
+  <footer>&copy; 2026 PBI Genie Pty Ltd. All rights reserved.</footer>
 </body>
 </html>
